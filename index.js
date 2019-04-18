@@ -17,8 +17,8 @@ massive(CONNECTION_STRING).then(dbInstance => {
 }).catch(err=>console.log(`${err} error `))
 
 
-app.post("/api/products", products_controller.create)
 app.get("/api/products", products_controller.getAll)
+app.post("/api/products", products_controller.create)
 app.get("/api/products/:id", products_controller.getOne)
-app.put(`/api/products/:id`, products_controller.update)
+app.put("/api/products/:id", products_controller.update)
 app.delete("/api/products/:id", products_controller.delete)
